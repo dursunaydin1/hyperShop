@@ -1,7 +1,8 @@
 // API Token
 // Buraya kendi API token'ınızı ekleyin
 // Token'ı almak için: https://hyperteknoloji.com.tr adresine gidin ve üye girişi yapın
-const API_TOKEN = ""; // Buraya kendi token'ınızı ekleyin
+// Vercel'de çalıştırmak için: Settings > Environment Variables > API_TOKEN
+const API_TOKEN = window.API_TOKEN || ""; // Buraya kendi token'ınızı ekleyin
 
 let currentPage = 1;
 const productsPerPage = 40;

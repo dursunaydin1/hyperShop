@@ -1,10 +1,18 @@
 {
-  "buildCommand": "echo 'window.HYPER_API_TOKEN = \"$HYPER_API_TOKEN\";' > public/config.js",
-  "outputDirectory": ".",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "*.html",
+      "use": "@vercel/static"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "API_TOKEN": "@api_token"
+  }
 }
