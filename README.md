@@ -114,7 +114,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 
 ### Canlı Demo
 
-Projeyi canlı olarak görüntüleyebilirsiniz: [HyperShop on Vercel](https://hyper-shop.vercel.app)
+Projeyi canlı olarak görüntüleyebilirsiniz: [HyperShop on Vercel](https://hyper-shop-4d2s.vercel.app/)
 
 ### Proje Görüntüsü
 
