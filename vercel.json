@@ -8,9 +8,21 @@
     {
       "src": "*.css",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/style.css",
+      "dest": "/style.css"
+    },
+    {
+      "src": "/script.js",
+      "dest": "/script.js"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
