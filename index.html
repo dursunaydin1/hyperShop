@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HyperShop - Modern E-Ticaret</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>HyperShop</h1>
+        </div>
+        <div class="nav-links">
+          <a href="#" class="active" aria-label="Ürünler sayfasına git"
+            >Ürünler</a
+          >
+          <a href="#" aria-label="Kategoriler sayfasına git">Kategoriler</a>
+          <a href="#" aria-label="Kampanyalar sayfasına git">Kampanyalar</a>
+          <a href="#" aria-label="İletişim sayfasına git">İletişim</a>
+        </div>
+        <div class="nav-icons">
+          <a href="#" aria-label="Arama yap"><i class="fas fa-search"></i></a>
+          <a href="#" aria-label="Sepete git"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <a href="#" aria-label="Hesabım"><i class="fas fa-user"></i></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Premium Ürünler</h2>
+        <p>
+          En son teknoloji ve trend ürünlerle yaşamınızı kolaylaştırın. Kalite
+          ve şıklığın buluştuğu noktada, sizin için özenle seçilmiş ürünlerle
+          tanışın.
+        </p>
+      </section>
+
+      <section class="filters">
+        <div class="filter-group">
+          <select id="categoryFilter">
+            <option value="">Tüm Kategoriler</option>
+            <option value="electronics">Elektronik</option>
+            <option value="clothing">Giyim</option>
+            <option value="home">Ev & Yaşam</option>
+          </select>
+          <select id="sortFilter">
+            <option value="all">Tümü</option>
+            <option value="popular">En Popüler</option>
+            <option value="price-asc">Fiyat (Düşükten Yükseğe)</option>
+            <option value="price-desc">Fiyat (Yüksekten Düşüğe)</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="loading-container" id="loadingContainer">
+          <div class="loading-spinner"></div>
+          <p>Ürünler yükleniyor...</p>
+        </div>
+        <div class="products" id="productContainer"></div>
+      </section>
+
+      <div class="pagination">
+        <button id="prevPage" class="page-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div id="pageNumbers" class="page-numbers"></div>
+        <button id="nextPage" class="page-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>HyperShop</h3>
+          <p>
+            Modern e-ticaret deneyimi sunan HyperShop, en son teknoloji
+            ürünleri, trend giyim ve ev yaşam ürünlerini uygun fiyatlarla
+            sizlere sunuyor. Kalite ve güvenin adresi.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Hızlı Linkler</h3>
+          <a href="#">Hakkımızda</a>
+          <a href="#">Ürünler</a>
+          <a href="#">İletişim</a>
+        </div>
+        <div class="footer-section">
+          <h3>İletişim</h3>
+          <p>Email: info@hypershop.com</p>
+          <p>Tel: +90 555 123 4567</p>
+        </div>
+        <div class="footer-section">
+          <h3>Sosyal Medya</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 HyperShop. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+    <template id="productTemplate">
+      <div class="product-card">
+        <img src="" alt="Ürün görseli" class="product-image" loading="lazy" />
+        <div class="product-info">
+          <h3 class="product-title"></h3>
+          <div class="product-price-container">
+            <p class="product-price"></p>
+            <p class="product-original-price"></p>
+          </div>
+          <a href="" class="detail-btn" target="_blank">Detay</a>
+        </div>
+      </div>
+    </template>
+
+    <template id="noProductsTemplate">
+      <p class="no-products">Ürün bulunamadı</p>
+    </template>
+
+    <template id="pageNumberTemplate">
+      <button class="page-number"></button>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
