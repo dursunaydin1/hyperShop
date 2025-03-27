@@ -1,4 +1,9 @@
-const API_TOKEN = "";
+// API Token
+// Buraya kendi API token'ınızı ekleyin
+// Token'ı almak için: https://hyperteknoloji.com.tr adresine gidin ve üye girişi yapın
+// const API_TOKEN = "buraya-kendi-tokeninizi-yazin";
+
+// Örnek token formatı (kendi tokeninizi bu formatta ekleyin):
 
 let currentPage = 1;
 const productsPerPage = 40;

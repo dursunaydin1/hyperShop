@@ -1,0 +1,10 @@
+{
+  "buildCommand": "echo 'window.HYPER_API_TOKEN = \"$HYPER_API_TOKEN\";' > public/config.js",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
